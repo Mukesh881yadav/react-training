@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment1</title>
+</head>
+<body>
+    <script>
+        let students=[{
+            "Name":"Mukesh",
+            "age":25,
+            "marks":60,
+        },
+
+        {
+            "Name":"sanjay",
+            "age":30,
+            "marks":35,
+        },
+        {
+            "Name":"Rajneesh",
+            "age":25,
+            "marks":71,
+        },
+        {
+            "Name":"Kishor",
+            "age":20,
+            "marks":30,
+        },
+    ]
+
+        let result=students.map((Element)=>{
+            return Element;
+        });
+        let student1=result.filter((Element)=>{
+           return  Element.age>=21&&Element.marks>=55;
+        });
+    
+        let finalstudents=student1.reduce((acc,Elements)=>{
+            return `${acc} ${Elements.Name} : ${Elements.age},`
+        },'')
+        console.log(finalstudents);
+        // console.log(student1);
+    </script>
+</body>
+</html> 
